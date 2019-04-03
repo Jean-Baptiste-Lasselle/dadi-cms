@@ -62,34 +62,40 @@ dadi web new unprojetparticulier
 cd unprojetparticulier
 cp ./config/config.development.json ./config/config.development.generated.json
 rm -f ./config/config.development.json
-echo '{' >> config.development.json
-echo '  "server": {' >> config.development.json
-echo '    "host": "0.0.0.0",' >> config.development.json
-echo '    "port": 3000' >> config.development.json
-echo '  },' >> config.development.json
-echo '  "cluster": false,' >> config.development.json
-echo '    "api": {' >> config.development.json
-echo '    "host": "127.0.0.1",' >> config.development.json
-echo '    "port": 3000' >> config.development.json
-echo '  }' >> config.development.json
-echo '}' >> config.development.json
-cp ./config.development.json ./config.production.json
-
-
-
+echo '{' >> ./config/config.development.json
+echo '  "server": {' >> ./config/config.development.json
+echo '    "host": "0.0.0.0",' >> ./config/config.development.json
+echo '    "port": 3000' >> ./config/config.development.json
+echo '  },' >> ./config/config.development.json
+echo '  "cluster": false,' >> ./config/config.development.json
+echo '    "api": {' >> ./config/config.development.json
+echo '    "host": "127.0.0.1",' >> ./config/config.development.json
+echo '    "port": 3000' >> ./config/config.development.json
+echo '  }' >> ./config/config.development.json
+echo '}' >> ./config/config.development.json
+cp ./config/config.development.json ./config/config.production.json
 
 ```
 
+* Well here you go with a resonable config starter : 
+
 ```JSon
 {
+  "app": {
+    "name": "Mon Projet Fort Particulier"
+  },
+  "global" : {
+    "baseUrl": "http://de.particulier.fr"
+  },
   "server": {
-    "host": "localhost",
+    "host": "0.0.0.0",
     "port": 3000
   },
   "cluster": false,
-    "api": {
-    "host": "127.0.0.1",
-    "port": 3000
+    "api": { /* But what you want, is to split api and web into two separate containers, which will scale up as micro-services */ 
+    "enabled": false,
+    "host": "0.0.0.0",
+    "port": 3001
   }
 }
 ```
@@ -97,4 +103,7 @@ cp ./config.development.json ./config.production.json
 
 
 * Sur la configuration : https://docs.dadi.cloud/web/6.1#configuration
+
+
+Première impressions : woua ça marche bien dis donc... super architecure, tooling... ça sent le gagnant.
 
