@@ -1,0 +1,1 @@
+require('@dadi/web')({"engines":[require('@dadi/web-handlebars'),require('dadi-web-mustachejs'),require('@dadi/web-dustjs'),require('web-es6-templates'),require('@dadi/web-pugjs')]})
