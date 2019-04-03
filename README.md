@@ -58,7 +58,7 @@ npm start
 ```JavaScript
 npm install @dadi/cli -g
 
-dadi api new unprojetparticulier
+dadi web new unprojetparticulier
 cd unprojetparticulier
 cp ./config/config.development.json ./config/config.development.generated.json
 rm -f ./config/config.development.json
