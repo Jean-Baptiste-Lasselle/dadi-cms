@@ -6,6 +6,10 @@ A try out of dadi api scalable CMS headless https://github.com/dadi/api https://
 * https://www.npmjs.com/package/@dadi/api
 * https://www.npmjs.com/package/@dadi/web
 
+
+Tests it on https://www.katacoda.com/courses/nodejs/playground 
+
+
 ## dadi-api
 
 * En utilisant `dadi-cli` : 
