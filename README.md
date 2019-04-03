@@ -12,6 +12,16 @@ A try out of dadi api scalable CMS headless https://github.com/dadi/api https://
 Tests it on https://www.katacoda.com/courses/nodejs/playground 
 
 
+# À faire 
+
+* faire un docker-compsoe avec : 
+  * un `dadi-web`
+  * un `dadi-api`
+  * un `dadi-database` (voir les possibilités offertes dans la configuration du "storage", mongo redis sont possibles à mon avis)
+
+Ce qui est indiqué pour cet exemple de déploiement (à transformer en docker-compose) : https://github.com/dadi/cloud
+
+
 ## dadi-api
 
 * En utilisant `dadi-cli` : 
