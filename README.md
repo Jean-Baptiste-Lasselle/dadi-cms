@@ -60,17 +60,41 @@ npm install @dadi/cli -g
 
 dadi api new unprojetparticulier
 cd unprojetparticulier
-rm -f ./config.development.json
+cp ./config/config.development.json ./config/config.development.generated.json
+rm -f ./config/config.development.json
 echo '{' >> config.development.json
 echo '  "server": {' >> config.development.json
 echo '    "host": "0.0.0.0",' >> config.development.json
 echo '    "port": 3000' >> config.development.json
 echo '  },' >> config.development.json
-echo '  "cluster": false' >> config.development.json
+echo '  "cluster": false,' >> config.development.json
+echo '    "api": {' >> config.development.json
+echo '    "host": "127.0.0.1",' >> config.development.json
+echo '    "port": 3000' >> config.development.json
+echo '  }' >> config.development.json
 echo '}' >> config.development.json
 cp ./config.development.json ./config.production.json
 
+
+
+
 ```
+
+```JSon
+{
+  "server": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "cluster": false,
+    "api": {
+    "host": "127.0.0.1",
+    "port": 3000
+  }
+}
+```
+
+
 
 * Sur la configuration : https://docs.dadi.cloud/web/6.1#configuration
 
