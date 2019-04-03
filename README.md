@@ -92,7 +92,7 @@ cp ./config/config.development.json ./config/config.production.json
     "port": 3000
   },
   "cluster": false,
-    "api": { /* But what you want, is to split api and web into two separate containers, which will scale up as micro-services */ 
+    "api": { // /* But what you want, is to split api and web into two separate containers, which will scale up as micro-services */ 
     "enabled": false,
     "host": "0.0.0.0",
     "port": 3001
