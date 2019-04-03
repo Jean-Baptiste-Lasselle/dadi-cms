@@ -45,9 +45,32 @@ mkdir myproject/
 cd myrpoject/
 git clone $SSH_URI_OF_NODE_APP_GIT_REPO .
 
-npm install --save @dadi/api
-
+# some config whatever itis,to connect it to dadi/api instance
 npm install --save @dadi/web
 
 npm start
 ``` 
+
+
+* Mais je préfère utiliser dadi-cli pour générer l'application web avcec le layout standard conçut par l'équipe `dadi.cloud` : 
+
+
+```JavaScript
+npm install @dadi/cli -g
+
+dadi api new unprojetparticulier
+cd unprojetparticulier
+rm -f ./config.development.json
+echo '{' >> config.development.json
+echo '  "server": {' >> config.development.json
+echo '    "host": "0.0.0.0",' >> config.development.json
+echo '    "port": 3000' >> config.development.json
+echo '  },' >> config.development.json
+echo '  "cluster": false' >> config.development.json
+echo '}' >> config.development.json
+cp ./config.development.json ./config.production.json
+
+```
+
+* Sur la configuration : https://docs.dadi.cloud/web/6.1#configuration
+
